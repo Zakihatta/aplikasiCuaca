@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Aplikasi Cek Cuaca</title>
+    <link rel="icon" href="/img/logo.png" />
+    <link rel="stylesheet" href="/css/style.css" class="rel" />
+  </head>
+  <body>
+    <div class="main-content">
+
+      {{>header}}
+      <p>Gunakan website ini untuk menemukan informasi cuaca!</p>
+      <form>
+        <input type="text" placeholder="Masukkan lokasi" required>
+        <button type="submit">Cek Cuaca</button>
+      </form>
+
+      <div>
+          <p id="pesan-1"></p>
+          <p id="pesan-2"></p>
+      </div>
+
+    <script src="/js/app.js"></script>
+    </div>
+    {{>footer}}
+
+  </body>
+</html>
