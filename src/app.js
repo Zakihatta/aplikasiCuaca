@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
@@ -7,7 +9,10 @@ const geocode = require("./utils/geocode");
 const forecast = require("./utils/prediksiCuaca");
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 
 //Mendefinisikan path untuk konfigurasi express
 const direktoriPublic = path.join(__dirname, "../public");
@@ -43,7 +48,7 @@ app.get("/bantuan", (req, res) => {
 app.get("/infoCuaca", (req, res) => {
   if (!req.query.address) {
     return res.send({
-      error: "Kamu harus memasukkan lokjasi yang ingin dicari",
+      error: "Kamu harus memasukkan lokasi yang ingin dicari",
     });
   }
   geocode(
@@ -90,6 +95,4 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log("Server berjalan pada port " + port);
-});
+module.exports = app;
