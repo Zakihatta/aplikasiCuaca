@@ -100,7 +100,7 @@ app.get("/berita", (req, res) => {
     }
 
     res.render("berita", {
-      judul: "Berita Terbaru",
+      judul: "WeatherHZ",
       berita: dataBerita,
     });
   });
