@@ -1,29 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Bantuan</title>
-    <link rel="icon" href="/img/1779940.png" />
-    <link rel="stylesheet" href="/css/style.css" class="rel" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/3127/3127236.png" />
+    <link rel="stylesheet" href="/css/bantuan.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/header.css" />
 </head>
 <body>
-    <div class="main-content">
-        {{>header}}
-        <div class="help-container">
-            <h1>Butuh Bantuan?</h1>
-            <p>{{teksBantuan}}</p>
-            
-            <h2>Pertanyaan yang Sering Diajukan (FAQ)</h2>
-            <div class="faq">
-                <h3>1. Bagaimana cara menghubungi dukungan pelanggan?</h3>
-                <p>Anda dapat menghubungi kami melalui email di support@example.com.</p>
+    <div class="container">
+    {{>header}}
+        <div class="main-container">
+            <div class="main-content">
+                <h1>Frequently Asked Questions (FAQ)</h1>
+
+                <div class="faq-items">
+                    <h3>Q : Halaman ini digunakan untuk apa?</h3>
+                    <p>A: Halaman ini digunakan untuk memberikan informasi tentang aplikasi, termasuk pertanyaan umum dan penjelasan tentang API yang digunakan dalam aplikasi ini.</p>
+                </div>
+
+                <div class="faq-items">
+                    <h3>Q : Apa itu API?</h3>
+                    <p>A: API (Application Programming Interface) adalah antarmuka yang memungkinkan berbagai aplikasi untuk saling berkomunikasi dan bertukar data.</p>
+                </div>
+
+                <div class="faq-items">
+                    <h3>Q: API apa yang digunakan dalam aplikasi ini?</h3>
+                    <p>A: Aplikasi ini menggunakan tiga API utama:
+                      <ul>
+                        <li><strong>Positionstack:</strong> Digunakan untuk layanan geolocation, membantu aplikasi mendapatkan informasi lokasi berdasarkan koordinat.</li>
+                        <li><strong>Weatherstack:</strong> Menyediakan data cuaca secara real-time, memungkinkan aplikasi untuk menampilkan informasi cuaca saat ini.</li>
+                        <li><strong>Mediastack:</strong> Memberikan akses ke berita dan konten media terbaru, sehingga aplikasi dapat menampilkan berita terkini kepada pengguna.</li>
+                      </ul>
+                    </p>
+                  </div>
                 
-                <h3>2. Apa yang harus saya lakukan jika saya lupa kata sandi saya?</h3>
-                <p>Silakan klik 'Lupa Kata Sandi?' di halaman login dan ikuti petunjuknya.</p>
+                  <div class="faq-items">
+                    <h3>Q: Salah satu pola arsitektur API adalah RESTful. Apa itu RESTful API?</h3>
+                    <p>A: RESTful API adalah jenis arsitektur API yang memungkinkan klien dan server berinteraksi menggunakan metode HTTP seperti GET, POST, PUT, dan DELETE. RESTful API dirancang untuk kemudahan penggunaan dan fleksibilitas.</p>
+                  </div>
                 
-                <h3>3. Di mana saya bisa menemukan informasi lebih lanjut tentang produk?</h3>
-                <p>Kunjungi halaman produk kami di <a href="/produk">sini</a>.</p>
+                  <div class="api-infographic">
+                    <img src="/img/restful.png" alt="Infographic of Positionstack, Weatherstack, and Mediastack APIs">
+                  </div>
             </div>
         </div>
-    </div>
     {{>footer}}
+    </div>
+    
 </body>
 </html>

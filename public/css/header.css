@@ -1,0 +1,99 @@
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.site-header {
+  display: flex;
+  background-color: var(--white_a700_68);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-sm);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header_top-row {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1142px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 60px;
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+.header_logo {
+  margin-right: 24em;
+  width: 16%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.header_logo--line {
+  height: 18px;
+  margin-left: 28px;
+  margin-right: 28px;
+  margin-bottom: 2px;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  @media only screen and(max-width: 1050px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.site-header h1 {
+  margin: 0; /* Menghilangkan margin */
+  font-size: 2em; /* Ukuran font lebih besar */
+  color: var(--purple_a400);
+}
+
+.navbar {
+  margin-top: auto;
+  margin-bottom: auto;
+  gap: 40px;
+  align-self: end;
+  display: flex;
+  flex-wrap: nowrap;
+  @media only screen and (max-width: 550px) {
+    align-self: auto;
+  }
+}
+
+.navbar a {
+  color: var(--purple_300);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.navbar .nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.navbar a:hover {
+  color: var(--pink_900); /* Warna saat hover */
+}

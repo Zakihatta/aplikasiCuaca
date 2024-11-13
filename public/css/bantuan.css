@@ -1,0 +1,129 @@
+:root {
+  /* ------Color variables------ */
+  --pink_300: #f93fc1;
+  --pink_900: #6f066d;
+  --purple_300: #de66dc;
+  --purple_400: #b338b1;
+  --purple_400_01: #8c37ab;
+  --purple_a100: #d08aff;
+  --purple_a200_a8: #d83bf7a8;
+  --purple_a400: #cf00ba;
+  --purple_a400_01: #ff12c3;
+  --white_a700_51: #ffffff51;
+  --white_a700_68: #ffffff68;
+  --white_a700_99: #ffffff99;
+
+  --space-xs: 8px;
+  --space-sm: 14px;
+
+  --radius-xs: 4px;
+  --radius-sm: 44px;
+}
+
+/* Body Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/default.jpg"); /* Path ke gambar background */
+  background-size: cover; /* Agar gambar menutupi seluruh layar */
+  background-position: center; /* Pusatkan gambar */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar */
+  height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  gap: 128px;
+  background-image: url(/img/default.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+    gap: 106px;
+  }
+}
+
+/* Container untuk tata letak keseluruhan */
+.main-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 1080px; /* Sesuaikan ini dengan tinggi header */
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 8px rgba(97, 95, 95, 0.1);
+  padding-top: 100px;
+}
+
+.main-content {
+  padding: 40px;
+  text-align: center;
+}
+
+.main-content h1 {
+  font-size: 2.5em;
+  color: var(--purple_a400);
+  margin-bottom: 20px;
+}
+
+/* FAQ Item Box Styling */
+.faq-items {
+  background-color: var(--white_a700_51);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--white_a700_99);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hover Effect for FAQ Items */
+.faq-items:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Question Title Styling */
+.faq-items h3 {
+  font-size: 1.2em;
+  color: var(--purple_300);
+  margin-bottom: 10px;
+}
+
+/* Answer Text Styling */
+.faq-items p,
+.faq-items ul {
+  color: #555;
+  font-size: 1em;
+  margin-top: 5px;
+  line-height: 1.6;
+}
+
+.faq-items ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.api-infographic {
+  text-align: center;
+  margin-top: 90px;
+}
+
+.api-infographic img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

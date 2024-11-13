@@ -1,0 +1,38 @@
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.site-footer {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--white_a700_68);
+  color: var(--purple_400) !important;
+  padding: 12px; /* Ruang dalam yang lebih besar */
+  text-align: center; /* Tengah */
+  position: relative; /* Memungkinkan posisi relatif pada child */
+}
+
+.footer-content {
+  margin: auto; /* Tengah dalam footer */
+}
+
+.footer-content p {
+  font-size: 1em; /* Ukuran font untuk teks footer */
+  margin: 10px 0; /* Jarak antar teks */
+}
+
+.social-icons {
+  margin: 10px 0; /* Jarak antara teks dan ikon sosial */
+}
+
+.social-icons a {
+  margin: 0 15px; /* Jarak antara ikon */
+}
+
+.social-icons img {
+  width: 30px; /* Ukuran ikon yang lebih besar */
+  height: auto; /* Proporsional */
+}

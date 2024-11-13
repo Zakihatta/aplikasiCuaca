@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aplikasi Cek Cuaca</title>
-  <link rel="icon" href="/img/logo.png" />
+  <title>WeatherHZ - Ral Time Data & Advanced Technology</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/3127/3127236.png" />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/header.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,24 +19,34 @@
 <body>
   <div class="container">
     {{> header}}
+    <div class="main-container">
+      <div class="main-content">
+        <h1>WeatherHZ</h1>
+        <h5>Temukan informasi terkini terkait lokasi yang anda inginkan dengan cepat dan akurat !</h5>
 
-    <div class="main-content">
-      <h1>Cek Cuaca Terkini</h1>
-      <p>Masukkan lokasi untuk menemukan informasi cuaca secara cepat dan akurat!</p>
-      <form class="weather-form" id="weather-form">
-        <input type="text" id="location" placeholder="Masukkan lokasi" required />
-        <button type="submit">Cek Cuaca</button>
-      </form>
+        <div class="content_icons">
+          <img src="/img/mdi_weather_snowy.svg" alt="Weather Icon Mdi" class="content_icon--weather-snowy">
+          <img src="/img/fluent_weather_snowy.svg" alt="Weather Icon Fluent" class="content_icon--weather-snowy">
+          <img src="/img/material_weather_snowy.svg" alt="Weather Icon Material" class="content_icon--weather-snowy">
+          <img src="/img/icon_weather4.svg" alt="Weather Icon Material" class="content_icon--weather-snowy">
+          <img src="/img/icon_weather5.svg" alt="Weather Icon Material" class="content_icon--weather-snowy">
+        </div>
 
-      <div class="weather-info">
-        <p id="pesan-1"></p>
-        <p id="pesan-2"></p>
+        <p>Masukkan lokasi untuk menemukan informasi cuaca secara cepat dan akurat!</p>
+        <form class="weather-form" id="weather-form">
+          <input type="text" id="location" placeholder="Masukkan lokasi" required />
+          <button type="submit">Cek Cuaca</button>
+        </form>
+
+        <div class="weather-info">
+          <p id="pesan-1"></p>
+          <p id="pesan-2"></p>
+        </div>
       </div>
     </div>
-
     {{> footer}}
   </div>
-
+  
   <script>
     document.getElementById("weather-form").addEventListener("submit", (e) => {
       e.preventDefault();
@@ -76,7 +88,7 @@
           document.getElementById("pesan-2").textContent = ""; // Kosongkan pesan kedua
         });
     });
-  
+
     // Fungsi untuk memperbarui background sesuai deskripsi cuaca
     function updateBackground(weatherDescription) {
       const body = document.body;

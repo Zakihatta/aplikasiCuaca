@@ -1,37 +1,55 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
   <head>
-    <title>Halaman About Me</title>
-    <link rel="icon" href="/img/logo.png" />
-    <link rel="stylesheet" href="/css/style.css" class="rel" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherHZ - Ral Time Data & Advanced Technology</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/3127/3127236.png" />
+  <link rel="stylesheet" href="/css/about.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,400;1,700;1,900&family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="main-content">
+    <div class="container">
       {{>header}}
-      <img class="portrait" src="/img/hz.jpg" />
-      <div class="bio">
-        <h1>Selamat Datang di Halaman Saya!</h1>
-        <p>Saya adalah seorang pengembang web yang menyukai tantangan baru. Saya memiliki pengalaman dalam berbagai teknologi web dan senang berkolaborasi dalam proyek yang menarik.</p>
-      </div>
-    </div>
+        <div class="main-container">
+          <div class="main-content">
+            <h1><span>About me,</span> a Visual Designer living in Indonesia</h1>
+            <p>"As a Senior Full-Stack Developer with over 3 years of experience,&nbsp;
+              I specialize in building robust and scalable web applications with a focus on both front-end and back-end technologies. I create intuitive, user-centered solutions, ensuring seamless integration across all layers of the application stack while maintaining a strong focus on performance and user experience."</p>
+            
+            <img src="/img/profile2.jpg" alt="profile" class="profile-photo">
 
-    <div class="skills">
-      <h2>Keterampilan Saya</h2>
-      <ul>
-        <li>HTML & CSS</li>
-        <li>JavaScript</li>
-        <li>Node.js</li>
-        <li>Express.js</li>
-        <li>MongoDB</li>
-      </ul>
-    </div>
+            <h2 class="name-about">Zaki Hatta</h2>
+            <h4 class="nim-about">22343083</h4>
 
-    <div class="social-links">
-      <h2>Ikuti saya di Media Sosial</h2>
-      <a href="https://github.com/Zakihatta" target="_blank">Github</a>
-      <a href="https://www.linkedin.com/in/zaki-hatta-483109284/" target="_blank">LinkedIn</a>
-      <a href="https://instagram.com/zakihatta_" target="_blank">Instagram</a>
-    </div>
+            <div class="service-contact">
+              <h2 class="offer-service">We offer services in:</h2>
+              <ul class="services-list">
+                <li>UI/UX Design</li>
+                <li>Web/Mobile Design</li>
+                <li>Logo & Branding</li>
+                <li>Graphic Design, Motion & Animation</li>
+                <li>Web/Mobile App Development</li>
+                <li>No-Code Development (Webflow)</li>
+              </ul>
 
-    {{>footer}}
+              <h2 class="get-in-touch">Get in touch with us!</h2>
+              <ul class="contact-list">
+                <li>📩 Email: <a href="mailto:zakihattamg@gmail.com">zakihattamg@gmail.com</a></li>
+                <li>📸 Instagram: <a href="https://instagram.com/zakihatta_" target="_blank">instagram.com/zakihatta_</a></li>
+                <li>💼 LinkedIn: <a href="https://linkedin.com/Zakihatta" target="_blank">linkedin.com/Zakihatta</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      {{>footer}}
   </body>
 </html>

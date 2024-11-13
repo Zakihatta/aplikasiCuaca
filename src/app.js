@@ -7,6 +7,7 @@ const { error } = require("console");
 
 const geocode = require("./utils/geocode");
 const forecast = require("./utils/prediksiCuaca");
+const getBerita = require("./berita");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -30,7 +31,7 @@ app.use(express.static(direktoriPublic));
 //Main page
 app.get("", (req, res) => {
   res.render("index", {
-    judul: "Aplikasi Cek Cuaca",
+    judul: "WeatherHZ",
     nama: "Zaki Hatta",
   });
 });
@@ -38,9 +39,10 @@ app.get("", (req, res) => {
 //FAQ page
 app.get("/bantuan", (req, res) => {
   res.render("bantuan", {
-    judul: "Halaman bantuan",
+    judul: "WeatherHZ",
     nama: "Zaki hatta",
-    teksBantuan: "ini adalah teks bantuan",
+    teksBantuan:
+      "Apakah Anda mengalami kesulitan atau memiliki pertanyaan? Kami memahami bahwa setiap masalah dapat menjadi tantangan. Tim dukungan kami siap membantu Anda menyelesaikan masalah dengan cepat dan efektif.",
   });
 });
 
@@ -74,7 +76,7 @@ app.get("/infoCuaca", (req, res) => {
 //About page
 app.get("/about", (req, res) => {
   res.render("about", {
-    judul: "About me",
+    judul: "WeatherHZ",
     nama: "Zaki Hatta",
   });
 });
@@ -84,6 +86,23 @@ app.get("/bantuan/*", (req, res) => {
     judul: "404",
     nama: "Zaki Hatta",
     pesanKesalahan: "Artikel yang dicari tidak ditemukan.",
+  });
+});
+
+// Rute untuk halaman berita
+app.get("/berita", (req, res) => {
+  getBerita((error, dataBerita) => {
+    if (error) {
+      return res.render("berita", {
+        judul: "News Today",
+        error: "Gagal mengambil berita. Silakan coba lagi nanti.",
+      });
+    }
+
+    res.render("berita", {
+      judul: "Berita Terbaru",
+      berita: dataBerita,
+    });
   });
 });
 

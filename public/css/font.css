@@ -1,0 +1,47 @@
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url(/public/fonts/Poppins-Bold.ttf);
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url(/public/fonts/Poppins-Regular.ttf);
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url(/public/fonts/NotoSans-Regular.ttf);
+  font-family: "Noto Sans";
+  font-weight: 400;
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url(/public/fonts/Poppins-ExtraLight.ttf);
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url(/public/fonts/NotoSans-Bold.ttf);
+  font-family: "Noto Sans";
+  font-weight: 700;
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url(/public/fonts/NotoSans-Medium.ttf);
+  font-family: "Noto Sans";
+  font-weight: 500;
+}
